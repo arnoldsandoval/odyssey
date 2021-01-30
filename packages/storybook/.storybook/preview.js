@@ -1,6 +1,7 @@
 import "./preview.scss";
 
 export const parameters = {
+  chromatic: { pauseAnimationAtEnd: true },
   controls: { expanded: true },
   grid: {
     cellSize: 10

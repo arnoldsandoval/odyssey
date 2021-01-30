@@ -3,10 +3,10 @@ import classNames from 'classnames'
 const COMPONENT_NAME = "Modal"
 
 export default {
-  title: `Components/${COMPONENT_NAME}/SCSS`,
+  title: `Components/${COMPONENT_NAME}/SCSS`
 };
 
-const Template = ({ title, content, footer, isOpen }) => {
+const Template = ({ title, content, footer, isOpen = true }) => {
   const componentClass = classNames({
     "ods-modal": true,
     "is-open": isOpen
@@ -35,5 +35,9 @@ Default.args = {
   content: "<p>Modal, main content</p>",
   footer: `<button class="ods-button is-ods-button-clear" data-micromodal-close aria-label="Close this dialog window">Cancel</button>
 <button class="ods-button">Continue</button>`,
-  isOpen: true
+  isOpen: false
 };
+
+Default.parameters = {
+  chromatic: { delay: 300 }
+}

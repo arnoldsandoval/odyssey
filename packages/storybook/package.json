@@ -1,5 +1,5 @@
 {
-  "name": "storybook",
+  "name": "@okta/odyssey-storybook",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -12,6 +12,7 @@
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "next",
     "babel-loader": "^8.2.2",
+    "chromatic": "^5.6.1",
     "css-loader": "^5.0.1",
     "markdown-to-jsx": "^7.1.1",
     "sass-loader": "^10.1.0",
@@ -23,6 +24,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build": "build-storybook -output-dir ./dist"
+    "build": "build-storybook -o ./dist",
+    "chromatic": "npx chromatic --project-token"
   }
 }
