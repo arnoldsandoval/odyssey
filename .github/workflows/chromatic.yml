@@ -18,6 +18,12 @@ jobs:
         with:
           fetch-depth: 0 # 👈 Required to retrieve git history
 
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      # 👇 Cache dependencies
       - uses: actions/cache@v2
         with:
           path: '**/node_modules'
@@ -26,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
         
-        # 👇 Adds Chromatic as a step in the workflow
+      # 👇 Adds Chromatic as a step in the workflow
       - name: Build Storybook
         run: yarn workspace @okta/odyssey-storybook build
 
